@@ -10,13 +10,18 @@
   <body>
     <div class="wrapper">
     <h1>Welcome.</h1>
+ <form class="login-form" method="post" name="form" action="home.html"  onsubmit="return validated()">
     <div class="input-box">
-      <input type="text" placeholder="E-Mail Address" required />
+      <input type="email" placeholder="E-Mail Address" name="email" required />
       <box-icon type="solid" name="user-circle"></box-icon>
+      <div id="error-email">Please fill your up email id or password
+      </div>
     </div>
     <div class="input-box">
-      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Password" name="password" required />
       <box-icon type="solid" name="lock-alt"></box-icon>
+      <div id="error-pass">Please fill up your password
+      </div>
     </div>
 
     <div class="rememberme">
@@ -27,6 +32,10 @@
     <div class="forgot">
      <P>Forgot Password? <a href="#">Rigister</a></P>
     </div>
+    </form>
     </div>
+	<script src="index.js"></script>
+
+
   </body>
 </html>
